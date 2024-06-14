@@ -1,13 +1,4 @@
-import { useEffect } from "react";
-
-export const CareButtons = ({
-  health,
-  fullness,
-  happiness,
-  setHealth,
-  setFullness,
-  setHappiness,
-}) => {
+export const CareButtons = ({ setHealth, setFullness, setHappiness }) => {
   const feedPet = () => {
     setFullness((prevFullness) => Math.min(100, prevFullness + 20));
   };
@@ -22,15 +13,9 @@ export const CareButtons = ({
 
   return (
     <>
-      <button onClick={feedPet}>
-        Feed
-      </button>
-      <button onClick={playWithPet}>
-        Play
-      </button>
-      <button onClick={healPet}>
-        Heal
-      </button>
+      <button onClick={feedPet}>Feed</button>
+      <button onClick={playWithPet}>Play</button>
+      <button onClick={healPet}>Heal</button>
     </>
   );
 };
